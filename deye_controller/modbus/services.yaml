@@ -1,0 +1,9 @@
+set_battery_mode:
+  description: "Set the battery mode (charge, discharge, idle)."
+  fields:
+    mode:
+      description: "Mode to set (charge, discharge, idle)."
+      example: "charge"
+    power:
+      description: "Power level (optional)."
+      example: 2500

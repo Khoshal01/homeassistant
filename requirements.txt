@@ -1,0 +1,8 @@
+homeassistant
+pysolarmanv5
+deye-controller
+logging
+struct
+typing
+pyyaml
+requests
