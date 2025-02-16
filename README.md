@@ -1,9 +1,9 @@
-##Deye Inverter Control - Home Assistant Integration
+# Deye Inverter Control - Home Assistant Integration
 
-Overview
+## Overview
 This project provides a Home Assistant integration for controlling a Deye inverter. It allows switching between charge, discharge, and idle states via Home Assistant automation.
 
-Installation
+## Installation
 
 1️⃣ Create a Virtual Environment & Install Dependencies
 Ensure Python is installed, then run the following commands:
@@ -68,7 +68,7 @@ action:
 ```
 Replace `charge` with `discharge` or `idle` as needed.
 
-File Structure
+## File Structure
 ```
 /homeassistant/
  ├── inverter_control.py  # Main control script
@@ -82,7 +82,7 @@ File Structure
  ├── sell_programmer.py  # Communication handler
 ```
 
-Support
+## Support
 For any issues, check Home Assistant logs or contact support.
 
 ---
