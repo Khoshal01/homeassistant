@@ -1,0 +1,5 @@
+requests
+flask
+paho-mqtt
+pyserial
+pymodbus

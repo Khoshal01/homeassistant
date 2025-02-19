@@ -1,11 +1,10 @@
 {
-    "domain": "billbuster_hassio",
-    "name": "BillBuster Hassio",
-    "version": "1.0.0",
-    "documentation": "https://github.com/Khoshal01/homeassistant",
-    "dependencies": [],
-    "codeowners": ["Khoshal01"],
-    "requirements": ["deye-controller"],
-    "iot_class": "local_polling"
-  }
-  
+  "name": "BillBuster Hassio",
+  "version": "1.0.0",
+  "slug": "billbuster_hassio",
+  "description": "Control your battery modes",
+  "startup": "application",
+  "boot": "auto",
+  "homeassistant_api": true,
+  "host_network": true
+}

@@ -1,0 +1,14 @@
+name: "Inverter Control Add-on"
+version: "1.0.0"
+slug: "inverter_control"
+description: "Hass.io add-on for controlling an inverter via shared folder."
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: application
+boot: auto
+map:
+  - share
+options: {}
+schema: {}

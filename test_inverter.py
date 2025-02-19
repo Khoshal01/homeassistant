@@ -1,14 +1,25 @@
-from inverter_control import InverterControl
+import json
+import os
 
-# Example IP and Serial (not used in mock mode)
-INVERTER_IP = "192.168.1.108"
-INVERTER_SERIAL = 2799999999
+# Define the shared folder path
+SHARED_FOLDER = "/share/inverter_control"
+STATE_FILE = os.path.join(SHARED_FOLDER, "state.json")
 
-# Initialize the controller in MOCK MODE
-controller = InverterControl(INVERTER_IP, INVERTER_SERIAL, mock=True)
+# Ensure the shared folder exists
+os.makedirs(SHARED_FOLDER, exist_ok=True)
 
-# Test different modes
-controller.set_battery_mode("charge")
-controller.set_battery_mode("discharge")  # Change to 'discharge' or 'idle' as needed
-controller.set_battery_mode("idle")  # Change to 'discharge' or 'idle' as needed
-# Change to 'discharge' or 'idle' as needed
+def save_state(mode, power):
+    """Save inverter mode to state.json inside the shared folder."""
+    state = {
+        "mode": mode,
+        "power": power
+    }
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f)
+    print(f"State saved: {state}")
+
+# Simulate inverter behavior
+modes = [("charge", 2500), ("discharge", -2500), ("idle", 0)]
+for mode, power in modes:
+    print(f"[MOCK MODE] Pretending to set mode: {mode} with power {power}")
+    save_state(mode, power)

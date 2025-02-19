@@ -1,0 +1,12 @@
+{
+  "name": "Inverter Controller",
+  "version": "1.0",
+  "slug": "inverter_control",
+  "description": "An add-on to control the inverter and share data via /share/",
+  "startup": "application",
+  "boot": "auto",
+  "ports": {},
+  "map": ["share"],
+  "schema": {},
+  "image": "local/inverter_control"
+}
